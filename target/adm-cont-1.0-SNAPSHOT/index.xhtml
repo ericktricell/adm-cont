@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="pt"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Controle de Serviços</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="images/logo.png" type="image/x-icon"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="css/login.css"/>
+    </h:head>
+    <h:body>
+        <div class="container card-login text-center">
+            <div class="card box">
+                <div class="card-header"><img src="images/logo.png" width="40"/> <strong>Login</strong></div>
+                <h:form>
+                    <p:growl id="growl" showDetail="true" sticky="true" />
+                    <div class="card-group">
+                        <p:outputLabel for="logintxt" value="Login"/>
+                        <p:inputText id="logintxt" type="text" value="#{loginBean.login}" placeholder="Nome de Usuario"/>
+                    </div>
+                    <div class="card-group">
+                        <p:outputLabel for="senhatxt" value="Senha"/>
+                        <p:inputText value="#{loginBean.senha}" id="senhatxt" type="password" placeholder="Senha"/>
+                    </div>
+                    <p:commandButton class="btn btn-primary" action="#{loginBean.redireciona()}" value="Login" update="growl"/>
+                </h:form>
+            </div>
+        </div>
+
+        <!-- scripts sessão-->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-easing/jquery.easing.min.js"></script>
+    </h:body>
+</html>

@@ -1,0 +1,26 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/05/2018, 22:21:11
+    Author     : Eu
+*/
+
+nav{
+    display: block;
+    background: activeborder;
+}
+
+#faixa{
+    position: absolute;
+    left: 30%;
+}
+
+#nomeHead{
+    position: absolute;
+    left: 70%;
+    top: 2%;
+    font-size: 45px;
+}
